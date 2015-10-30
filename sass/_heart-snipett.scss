@@ -1,0 +1,28 @@
+
+
+
+h3{color:red}
+.love:before, .love:active{
+  font-family: FontAwesome;
+  content: "\f004";
+  position: absolute;
+  color: red;
+  font-size: 12px;
+  text-align: center;
+  line-height: 35px;
+  height: 35px;
+  // margin-left: 10px;
+  padding-left: 0;
+  // vertical-align: middle;
+  color: $maroon;
+  opacity: 1;
+ }
+
+.newclass{color:red;
+  animation-name: heart-fly;
+  animation-duration: 4s;}
+
+  .love:before{animation-name: heart-fly;
+  animation-duration: 4s; color: black}
+
+h3:focus{color:blue}

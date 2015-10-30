@@ -1,0 +1,102 @@
+@charset "UTF-8";
+@import 'variables';
+@import 'mixins';
+@import 'heart-snipett';
+
+
+.col-lg-12{margin-top: 100px;}
+.row {
+  padding-top: 100px; }
+
+.buttons-div .fa {
+  padding: 0; }
+
+ %bgstyle{
+  background: $lavendar;
+  color: $white;
+  display: inline-block;
+  border-radius: 50%;
+  text-align: center;
+  font-weight: 200;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: background 500ms;
+ } 
+
+.love, .like {
+  @extend %bgstyle;
+  cursor: pointer;
+  font-size: 13px;
+  line-height: 29px;
+  min-width: 29px;
+  height: 29px;
+  &:hover{
+  color: $lavendar;
+  background: rgba(191, 148, 228, 0.25);
+  transition: background 500ms; 
+  }
+ }
+
+.love-num, .like-num {
+  @extend %bgstyle;
+  font-size: 11px;
+  font-weight: bold;
+  line-height: 22px;
+  min-width: 22px;
+  height: 22px;
+  margin: 10px 1px 1px 1px;
+}
+
+
+.fa-heart:after {
+  color: red; width:100px; }
+
+
+@keyframes heart-fly {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px) translateX(-20px) rotateZ(15deg); width:50px; padding-left:0; margin-left:0; }
+  50% {
+    opacity: .75;
+    transform: scale(2) translateY(-30px) rotateZ(-15deg); width: 50px; }
+  100% {
+    opacity: 0;
+    transform: scale(2) translateY(-50px) rotateZ(15deg); width:50px; } 
+  }
+
+
+@-webkit-keyframes hvr-pulse {
+  25% {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1); }
+  75% {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9); } }
+
+@keyframes hvr-pulse {
+  25% {
+    -webkit-transform: scale(2.1);
+    transform: scale(2.1); }
+  75% {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9); } }
+
+.hvr-pulse {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale; }
+
+.hvr-pulse:hover, .hvr-pulse:focus, .hvr-pulse:active {
+  animation-name: hvr-pulse;
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear; }
+
+
+
+/*.fa:hover{transform:rotate(-30deg);  animation: fly 1s ease;}*/

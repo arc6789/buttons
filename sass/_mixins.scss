@@ -1,0 +1,88 @@
+
+
+@mixin buttonstyle($color, $placement, $width, $animat){
+	.btn-#{$placement}{
+		position:relative;
+		background-color:$color;
+		width:$width;
+		height:40px;
+		padding:10px;
+		margin:15px;
+		border: 5px solid lighten($color/2, 50%);
+		&:hover{
+			border: 2px dotted darken($color,20%);
+			background: linear-gradient($color, adjust-hue($color,100%));
+			transform:scale(1.2);
+			animation:$animat;
+		}
+	}
+}
+
+$colormap:(
+	greenc:green,
+	redc:red,
+	bluec:blue,
+);
+
+//Can pair this up as a second value for the top
+$animationmap:(
+	greenc:(color:green,animation-name:bounce),
+	redc:(color:green,animation-name:bounce),
+	bluec:(color:green,animation-name:bounce),
+) ;
+
+
+@each $key, $value in $colormap{
+
+	@include buttonstyle($value,$key,100px,'bounce 2s infinite');
+	// @include anim($key,$value[2])
+}
+
+
+@mixin anim($btnclass, $anim){
+	.btn-#{$btnclass}:hover{
+		animation: $anim 0.5s ease 2;
+		animation-timing-function: linear;
+	}
+}
+
+// @mixin keyframe{
+// 	@keyframes 
+// };
+
+
+@keyframes bounce{
+	0%{
+		top: 0px;}
+	
+	50%{top:-20px}
+
+	100%{top:0}
+
+}
+
+
+
+
+@mixin keyframe($animation-name){
+	@keyframes #{$animation-name}{
+		@content;
+	}
+};
+
+@include keyframe(slide-down){
+	0%{opacity:1}
+	100%{opacity:0.3}
+}
+
+// @each $key, $value in $colormap{
+
+// 	// .btn-#{$key}:hover{background-color:$value}
+
+// 	@include buttonstyle($value,$key,100px)
+
+// }
+// button{
+// 	@include buttonstyle(#b4d455,100px);
+// }
+

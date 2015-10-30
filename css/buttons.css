@@ -1,0 +1,179 @@
+/****** COLOR PALETTE *******/
+/******** DEFINED VARIABLES ********/
+.btn-greenc {
+  position: relative;
+  background-color: green;
+  width: 100px;
+  height: 40px;
+  padding: 10px;
+  margin: 15px;
+  border: 5px solid #40ff40; }
+  .btn-greenc:hover {
+    border: 2px dotted #001a00;
+    background: linear-gradient(green, #002b80);
+    transform: scale(1.2);
+    animation: "bounce 2s infinite"; }
+
+.btn-redc {
+  position: relative;
+  background-color: red;
+  width: 100px;
+  height: 40px;
+  padding: 10px;
+  margin: 15px;
+  border: 5px solid #ff8080; }
+  .btn-redc:hover {
+    border: 2px dotted #990000;
+    background: linear-gradient(red, #55ff00);
+    transform: scale(1.2);
+    animation: "bounce 2s infinite"; }
+
+.btn-bluec {
+  position: relative;
+  background-color: blue;
+  width: 100px;
+  height: 40px;
+  padding: 10px;
+  margin: 15px;
+  border: 5px solid #8080ff; }
+  .btn-bluec:hover {
+    border: 2px dotted #000099;
+    background: linear-gradient(blue, #ff0055);
+    transform: scale(1.2);
+    animation: "bounce 2s infinite"; }
+
+@keyframes bounce {
+  0% {
+    top: 0px; }
+  50% {
+    top: -20px; }
+  100% {
+    top: 0; } }
+
+@keyframes slide-down {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0.3; } }
+
+h3 {
+  color: red; }
+
+.love:before, .love:active {
+  font-family: FontAwesome;
+  content: "\f004";
+  position: absolute;
+  color: red;
+  font-size: 12px;
+  text-align: center;
+  line-height: 35px;
+  height: 35px;
+  padding-left: 0;
+  color: #A12B2B;
+  opacity: 1; }
+
+.newclass {
+  color: red;
+  animation-name: heart-fly;
+  animation-duration: 4s; }
+
+.love:before {
+  animation-name: heart-fly;
+  animation-duration: 4s;
+  color: black; }
+
+h3:focus {
+  color: blue; }
+
+.col-lg-12 {
+  margin-top: 100px; }
+
+.row {
+  padding-top: 100px; }
+
+.buttons-div .fa {
+  padding: 0; }
+
+.love, .like, .love-num, .like-num {
+  background: #BF94E4;
+  color: #fff;
+  display: inline-block;
+  border-radius: 50%;
+  text-align: center;
+  font-weight: 200;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: background 500ms; }
+
+.love, .like {
+  cursor: pointer;
+  font-size: 13px;
+  line-height: 29px;
+  min-width: 29px;
+  height: 29px; }
+  .love:hover, .like:hover {
+    color: #BF94E4;
+    background: rgba(191, 148, 228, 0.25);
+    transition: background 500ms; }
+
+.love-num, .like-num {
+  font-size: 11px;
+  font-weight: bold;
+  line-height: 22px;
+  min-width: 22px;
+  height: 22px;
+  margin: 10px 1px 1px 1px; }
+
+.fa-heart:after {
+  color: red;
+  width: 100px; }
+
+@keyframes heart-fly {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px) translateX(-20px) rotateZ(15deg);
+    width: 50px;
+    padding-left: 0;
+    margin-left: 0; }
+  50% {
+    opacity: .75;
+    transform: scale(2) translateY(-30px) rotateZ(-15deg);
+    width: 50px; }
+  100% {
+    opacity: 0;
+    transform: scale(2) translateY(-50px) rotateZ(15deg);
+    width: 50px; } }
+
+@-webkit-keyframes hvr-pulse {
+  25% {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1); }
+  75% {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9); } }
+
+@keyframes hvr-pulse {
+  25% {
+    -webkit-transform: scale(2.1);
+    transform: scale(2.1); }
+  75% {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9); } }
+
+.hvr-pulse {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale; }
+
+.hvr-pulse:hover, .hvr-pulse:focus, .hvr-pulse:active {
+  animation-name: hvr-pulse;
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear; }
+
+/*.fa:hover{transform:rotate(-30deg);  animation: fly 1s ease;}*/

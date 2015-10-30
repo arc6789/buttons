@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="">
+    <meta name="author" content="anusuya roy choudhury">
+
+    <title>Buttons | Anusuya Roy Choudhury</title>
+  <!--   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"> -->
+	<link rel="stylesheet" href="font-awesome-4.3.0/css/font-awesome.min.css">
+	
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    
+
+
+	<!-- <link href="css/bootstrap.css" rel="stylesheet"> -->
+	<link href='http://fonts.googleapis.com/css?family=Nixie+One|Unkempt|Muli|Julius+Sans+One|Amatic+SC|Handlee|Capriola' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Biryani|Roboto' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Nixie+One|Unkempt|Muli|Julius+Sans+One|Amatic+SC|Handlee|Capriola' rel='stylesheet' type='text/css'>
+	  
+    <link href='http://fonts.googleapis.com/css?family=Josefin+Slab|Amatic+SC|Handlee' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'>
+    <link href='https://api.tiles.mapbox.com/mapbox.js/v2.1.9/mapbox.css' rel='stylesheet' />
+    <link rel="stylesheet" type="text/css" href="css/buttons.css">
+
+	
+</head>
+<body ng-app="myApp">
+
+	<div class="container" ng-controller="MainController">
+		<div class="row">
+			<div class="col-lg-12">
+				<h3>{{title}}</h3>
+				<div class="buttons-div" style="width:140px; float:left;">
+					<div style="width:70px; float:left">	
+						<p class="like-num center-block" style="float:left">{{likes}}</p><p class="like center-block" style="float:left" ng-click="likesOne()"><i class="fa fa-thumbs-up center-block hvr-pulse"></i></p>
+					</div>
+					<div class="buttons-div" style="width:70px; float:right">
+						<p class="love center-block" style="float:left" ng-click="lovesOne()"><i class="th fa fa-heart center-block hvr-pulse"></i></p><p class="love-num center-block" style="float:left">{{loves}}</p>
+					</div>
+			    </div>
+<!-- 
+              	<p>&#9829</p>
+              	<p id="noned">hello</p> -->
+         <!--      	<p class="likes-num center-block">{{loves}}</p> -->
+         
+			</div>
+		</div>
+	</div>
+
+
+	<div class="buttonstuff col-lg-12">
+	<button class="btn-greenc"></button>
+	<button class="btn-redc"></button>
+	<button class="btn-bluec"></button>
+	</div>
+
+	<!-- <button ng-click="randomOne()">hi</button> -->
+<!-- 	<p id="col">color this</p>
+ -->
+
+<!--
+Folowing keys are stored in a database:
+likes, 
+like, 
+likes + like, 
+userid(ip-address)
+
+A User with a certain ipadress can only click like/love only once, 
+Also cannot take back likes,
+Their ipaddress is stored and everytime they visit the wesbite their like is shown
+
+-->
+
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src='https://api.tiles.mapbox.com/mapbox.js/v2.1.9/mapbox.js'></script>
+<script type="text/javascript" src="js/meetup-map.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.4/angular.js"></script>
+<script src="js/app.js"></script>
+<script src="js/controllers/MainController.js"></script>
+<script src="js/buttons.js"></script>
+<script type="text/javascript">
+	 $(document).ready(function () {
+        $(".navbar-nav li.trigger-collapse a").click(function(event) {
+          $(".navbar-collapse").collapse('hide');
+        });
+      });
+</script>
+
+</body>
+</html>
+
