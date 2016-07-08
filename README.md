@@ -1,5 +1,5 @@
 # buttons
-Buttons Demo. To be added to my websiite
+__Buttons Demo. To be added to my websiite__
 
 Description:
 Like and Love buttons that are somewhat inspired by facebook and tumblr's css animations. 
