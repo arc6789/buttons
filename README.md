@@ -6,7 +6,7 @@ __Buttons Demo. To be added to my websiite__
  
       - Install SublimeLinter package
       - Install SublimeLinter-contrib-eslint package (there are several other specific sublime linter packages to choose from. This will be specific to javascript)
-      - Quit sublime and restart (!important)`
+      - Quit sublime and restart (!important)
  
 * Webstorm: [package-name](http://www.example.com)		  * Webstorm: [package-name](http://www.example.com)
 
